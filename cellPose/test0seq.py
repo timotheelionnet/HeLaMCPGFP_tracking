@@ -3,18 +3,12 @@ import skimage as sk
 import numpy as np
 import pandas as pd
 import trackpy as tp
-import sys
 
 image = '/Users/lionnt01/Documents/data/NichTSTracking/cellpose/stitchSlidingAvg7.tif'
 image = '/Users/lionnt01/Documents/data/NichTSTracking/cellpose/train/stitchSlidingAvg7_frame196.tif'
 model = '/Users/lionnt01/Documents/GitHub/HeLaMCPGFP_tracking/cellpose/models/CP_20221111_093301'
 mask_out = '/Users/lionnt01/Documents/data/NichTSTracking/cellpose/out/out1'
 diameter = 100
-
-#figuring out which version is running
-print("Python version")
-print (sys.version)
-
 #read tif image in
 print("Loading image...")
 im = sk.io.imread(image)
